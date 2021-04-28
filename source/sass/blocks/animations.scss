@@ -1,0 +1,172 @@
+// in a calm state
+
+.animation {
+  opacity: 0;
+  transition: all 1.7s;
+}
+
+.animation.active {
+  opacity: 1;
+  transition: all 1.7s;
+}
+
+.bg_image.animation  {
+  margin-top: 59px;
+  transform: translateY(-50px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.win_head.animation  {
+  transform: translateY(-50px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.scand.animation  {
+  transform: translateY(-50px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.one-bg-container.bg .win-buttons.animation  {
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.one_row.one .one_row_image.animation {
+  transform: translateX(-80px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+.one_row.one .one_row_text.animation  {
+  transform: translateX(80px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+.one_row.two .one_row_image.animation  {
+  transform: translateX(80px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+.one_row.two .one_row_text.animation  {
+  transform: translateX(-80px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+//in a active state
+
+.bg_image.animation.active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.win_head.animation.active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.scand.animation.active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.bg_wrapper_win .win-buttons.animation.active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.one_row.one .one_row_image.active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+.one_row.one .one_row_text.active {
+  transform: translateX(0px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+.one_row.two .one_row_image.active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+.one_row.two .one_row_text.active {
+  transform: translateX(0px);
+  transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+
+
+///кнопки
+
+.header__wrapper__button.bli-animation {
+position: relative;
+overflow: hidden;
+
+}
+.bg_wrapper_win .win-buttons.animation {
+    position: relative;
+    overflow: hidden;
+}
+.fr_wrapper .win-buttons {
+    position: relative;
+    overflow: hidden;
+}
+.fr_wrapper .win-buttons:after {
+    content: "";
+    position: absolute;
+    left: -240px;
+    top: 60px;
+    height: 350px;
+    width: 500px;
+    background: linear-gradient(0deg, rgba(249, 249, 249,0.03) 6%, rgba(220, 195, 162,0.9) 49%, rgba(255, 255, 255,0.03) 93%);
+    transform: rotate(19deg);
+    animation: test 5s ease infinite;
+}
+
+.bg_wrapper_win .win-buttons.animation:after {
+content: "";
+position: absolute;
+left: -240px;
+top: 60px;
+height: 350px;
+width: 500px;
+background: linear-gradient(0deg, rgba(249, 249, 249,0.03) 6%, rgba(220, 195, 162,0.9) 49%, rgba(255, 255, 255,0.03) 93%);
+transform: rotate(19deg);
+animation: test 5s ease infinite;
+
+}
+.header__wrapper__button.bli-animation:after {
+content: "";
+position: absolute;
+left: -240px;
+top: 60px;
+height: 350px;
+width: 500px;
+background: linear-gradient(0deg, rgba(249, 249, 249,0.03) 6%, rgba(220, 195, 162,0.9) 49%, rgba(255, 255, 255,0.03) 93%);
+transform: rotate(19deg);
+animation: test 5s ease infinite;
+
+}
+
+@keyframes test {
+0% {
+
+    left: -100px;
+    top: 60px;
+    // transition: all 0.4s;
+}
+
+20% {
+    left: 30px;
+    top: -372px;
+    // transition: all 0.4s;
+}
+50% {
+    left: 30px;
+    top: -372px;
+    // transition: all 0.4s;
+}
+100% {
+    left: 30px;
+    top: -372px;
+    // transition: all 0.4s;
+}
+}

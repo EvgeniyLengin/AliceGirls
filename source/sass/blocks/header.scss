@@ -1,0 +1,294 @@
+body {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: 'Montserrat';
+  // overflow: hidden;
+  // position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &.hid {
+  overflow: hidden!important;
+}
+}
+
+header {
+  background-color: rgb(43, 47, 58);
+  height: 80px;
+  width: 100%;
+  // overflow: hidden
+
+  &.fixed {
+    position: fixed;
+    z-index: 999;
+    opacity: 1;
+    transition: all 1s;
+    top: 0;
+    left: 0;
+    animation: change-opacity 0.8s ease;
+  }
+
+  & .header__wrapper-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1268px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 960px) {
+      // position: relative;
+    }
+  }
+
+  & .header-wrapper {
+    display: flex;
+    width: 100%;
+    @media (max-width: 1000px) {
+      justify-content: flex-start;
+    }
+
+    & .nav {
+      max-width: 465px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+      font-size: 13.686px;
+      font-family: "Montserrat";
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      -moz-transform: matrix(1.02292730726217,0,0,1.02292730726217,0,0);
+      -webkit-transform: matrix(1.02292730726217,0,0,1.02292730726217,0,0);
+      -ms-transform: matrix(1.02292730726217,0,0,1.02292730726217,0,0);
+      margin-left: -57px;
+
+      & a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+      }
+      @media (max-width: 1268px) {
+        margin-left: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+
+    & .header__wrapper__button {
+      max-width: 235px;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgb(220, 195, 162);
+      margin-left: 30px;
+
+      & span {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(220, 195, 162);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 12.709px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.14em;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      @media (max-width: 625px) {
+          display: none;
+      }
+    }
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: -325px;
+    top: 0;
+    background-color: #2b2f3a;
+    z-index: 1000;
+    padding: 60px 25px;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+    transition: right 0.4s ease 0.2s,opacity 1.5s ease 0s;
+    @media (max-width: 1000px) {
+        display: flex;
+    }
+    & a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding-top: 25px;
+    }
+    &.active-menu {
+        right: 0px;
+        opacity: 1;
+        transition: right 0.4s ease 0.2s,opacity 1.5s ease 0s;
+
+    }
+    & .header__wrapper__button {
+        display: block;
+        align-self: flex-end;
+        width: 100%;
+        color: #dcc3a2;
+        padding:15px;
+        box-sizing: border-box;
+        border:1px solid #dcc3a2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+    }
+  }
+
+  & .button_m_menu {
+    display: none;
+    @media (max-width: 1000px) {
+      display: flex;
+      position: absolute;
+      width: 50px;
+      height: 40px;
+      right: 35px;
+      top: 20px;
+      // background-color: white;
+      z-index: 1001;
+    }
+    @media (max-width: 525px) {
+        right: 10px;
+    }
+    & .element_m {
+        position: absolute;
+        display: flex;
+        height: 2px;
+        width: 80px;
+        background-color: #dcc3a2;
+
+
+    }
+
+    overflow: hidden;
+    z-index: 9999;
+    & .element_m.m_1 {
+    left:-86px;
+    }
+    & .element_m.m_2 {
+    bottom: 0px;
+    right: -86px;
+    }
+
+    & .element_m.m_3 {
+    transform: rotate(90deg);
+    right: -40px;
+    top:-50px;
+    }
+
+    & .element_m.m_4 {
+    transform: rotate(90deg);
+    left: -40px;
+    bottom: -50px;
+    }
+    //ANIMATE
+    & .element_m.m_1.going {
+    left:0px;
+    transition: left 0.2s ease 0s;
+    }
+    & .element_m.m_2.going {
+    bottom: 0px;
+    right: 0px;
+    transition: right 0.2s ease 0.2s;
+    }
+
+    & .element_m.m_3.going {
+    transform: rotate(90deg);
+    right: -40px;
+    top:0px;
+    transition: top 0.2s ease 0.1s;
+    }
+
+    & .element_m.m_4.going {
+    transform: rotate(90deg);
+    left: -40px;
+    bottom: 0px;
+    transition: bottom 0.2s ease 0.25s;
+    }
+    ///END
+
+    & .wrap {
+        box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      // border: 1px solid white;
+
+      .line {
+        width: 37px;
+        position: absolute;
+        top: 18px;
+        left: 7px;
+        height: 3px;
+        background-color: #dcc3a2;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        background-color: #dcc3a2;
+        height: 3px;
+            left: 7px;
+        width: 37px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 9px;
+            left: 7px;
+        height: 3px;
+        width: 37px;
+        background-color: #dcc3a2;
+      }
+
+    }
+
+    ///animation
+
+  }
+}
+
+//keyframes
+@keyframes change-opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
